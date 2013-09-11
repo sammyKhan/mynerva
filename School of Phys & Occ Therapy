@@ -1,0 +1,3603 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" NAME="Cache-Control" CONTENT="no-cache">
+<LINK REL="stylesheet" HREF="/css/web_defaultapp.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
+<TITLE>Look Up Course Sections</TITLE>
+<META HTTP-EQUIV="Content-Script-Type" NAME="Default_Script_Language" CONTENT="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<DIV class="headerwrapperdiv">
+<DIV class="pageheaderdiv1">
+<A HREF="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</A>
+<H1>Minerva</H1></DIV><DIV class="headerlinksdiv">
+<SPAN class="pageheaderlinks2">
+<MAP NAME="Module_Navigation_Links_H" title="Module Navigation Links">
+<p>
+<A HREF="#skip_Module_Navigation_Links_H" onMouseover="window.status='Skip Module Navigation Links'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Skip Module Navigation Links'; return true" onBlur="window.status=''; return true"  class="skiplinks">Skip Module Navigation Links</A>
+<TABLE  CLASS="plaintable" SUMMARY="This is main table for displaying Tab Items."
+                          WIDTH="100%" cellSpacing=0 cellPadding=0 border=0>
+<TR>
+<TD CLASS="pldefault">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Tab Items."
+                 cellSpacing=0 cellPadding=0 border=0>
+<TR>
+<td class=taboff  height=22>
+<A HREF="/pban1/twbkwbis.P_GenMenu?name=bmenu.P_MainMnu" onMouseover="window.status='Main menu'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Main menu'; return true" onBlur="window.status=''; return true" >MAIN MENU</A>
+</TD>
+<TD class=bgtaboff height=22 vAlign=top align=right>
+<IMG SRC="/wtlgifs/web_tab_corner_right.gif" ALT="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8>
+</TD>
+<td class=taboff  height=22>
+<A HREF="/pban1/twbkwbis.P_GenMenu?name=bmenu.P_PersonalMnu" onMouseover="window.status='Personal Menu'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Personal Menu'; return true" onBlur="window.status=''; return true" >Personal</A>
+</TD>
+<TD class=bgtaboff height=22 vAlign=top align=right>
+<IMG SRC="/wtlgifs/web_tab_corner_right.gif" ALT="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8>
+</TD>
+<td class=taboff  height=22>
+<A HREF="/pban1/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu" onMouseover="window.status='Student Menu'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Student Menu'; return true" onBlur="window.status=''; return true" >Student</A>
+</TD>
+<TD class=bgtaboff height=22 vAlign=top align=right>
+<IMG SRC="/wtlgifs/web_tab_corner_right.gif" ALT="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8>
+</TD>
+<td class=taboff  height=22>
+<A HREF="/pban1/twbkwbis.P_GenMenu?name=bmenu.P_ApplMnu" onMouseover="window.status='Applicant Menu'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Applicant Menu'; return true" onBlur="window.status=''; return true" >Applicant</A>
+</TD>
+<TD class=bgtaboff height=22 vAlign=top align=right>
+<IMG SRC="/wtlgifs/web_tab_corner_right.gif" ALT="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8>
+</TD>
+<td class=taboff  height=22>
+<A HREF="/pban1/twbkwbis.P_GenMenu?name=bmenu.P_BsacMnu" onMouseover="window.status='Financial Aid/Awards'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Financial Aid/Awards'; return true" onBlur="window.status=''; return true" >Financial Aid/Awards</A>
+</TD>
+<TD class=bgtaboff height=22 vAlign=top align=right>
+<IMG SRC="/wtlgifs/web_tab_corner_right.gif" ALT="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD class=bgtabon width="100%" colSpan=2><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD></TR></TABLE>
+</MAP>
+</SPAN>
+<a name="skip_Module_Navigation_Links_H"></a>
+</DIV>
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
+         WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<DIV class="headerlinksdiv2">
+<FORM ACTION="/pban1/twbksrch.P_ShowResults" METHOD="POST">
+Search
+<SPAN class=fieldlabeltextinvisible><LABEL for=keyword_in_id><SPAN class=fieldlabeltext>Search</SPAN></LABEL></SPAN>
+<INPUT TYPE="text" NAME="KEYWRD_IN" SIZE="20" MAXLENGTH="65" ID="keyword_in_id">
+<INPUT TYPE="submit" VALUE="Go">
+</FORM>
+</div>
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext">
+<SPAN class="pageheaderlinks">
+<A HREF="/pban1/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu"  class="submenulinktext2" id="ssbbackurl">MENU</A>
+|
+<A HREF="/pban1/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu&amp;depth_in=2&amp;columns_in=3" accesskey="2" class="submenulinktext2">SITE MAP</A>
+|
+<A HREF="http://www.is.mcgill.ca/whelp/sis_help/rg_3a_cs_add.htm" accesskey="H" onClick="popup = window.open('http://www.is.mcgill.ca/whelp/sis_help/rg_3a_cs_add.htm', 'PopupPage','height=450,width=500,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</A>
+|
+<A HREF="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</A>
+</span>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV class="pagetitlediv">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
+   WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<H2>Look Up Course Sections</H2>
+</TD>
+<TD CLASS="pldefault">
+&nbsp;
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext">
+<DIV class="staticheaders">
+260499158 Chenghui Zhou<br>
+Fall 2013<br>
+Sep 10, 2013 08:19 PM<br>
+</div>
+</TD>
+</TR>
+<TR>
+<TD class="bg3" width="100%" colSpan=3><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD>
+</TR>
+</TABLE>
+<a name="main_content"></a>
+</DIV>
+<DIV class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+<FORM ACTION="/pban1/bwskfreg.P_AltPin1" METHOD="POST" onSubmit="return checkSubmit()">
+<DIV class="infotextdiv"><TABLE  CLASS="infotexttable" SUMMARY="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information."><TR><TD CLASS="indefault"><IMG SRC="/wtlgifs/web_info_cascade.png" ALT="Information" CLASS="headerImg" TITLE="Information"  NAME="web_info" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=12 WIDTH=14></TD><TD CLASS="indefault"><SPAN class=infotext> <UL>
+<li>To register for course sections, check the box in the <strong>Select</strong> column on the far left then click the <strong>Register</strong> button.
+<li>If a course section is full ("C" where the box normally displays) and space exists on a waitlist (see column Waitlist Remaining <b>WL Rem</b>), click <b>HELP</b> for instructions on how to add yourself to a waitlist.
+<LI>Click <strong>HELP</strong> at the top right corner of your screen for explanations of other codes found below.
+<LI>Click on the CRN (Course Reference Number) to see the course description.
+<LI>From the course description, click on the <b>Syllabus Available</b> link (where available) to see the course outline.
+<LI>It is your responsibility to fulfill prerequisites as described in the calendar for the course sections you are adding.</li>
+</li></UL>
+
+</p> <!--<P><FONT color=#ff0000><B>Fall term holiday schedule changes</B>: <BR>The normal Thursday schedule of course activities is cancelled for December 3, 2009. In its place, all lectures, labs, conferences and other course-related activities that are normally held on Mondays will be held on Thursday, December 3, 2009 as well. This change in schedule is to make up for activities that are cancelled on Monday, October 12 due to Thanksgiving Day.</FONT></P><p><b>Winter term study break: </b>  February 22 to 26, 2010<br><br>Classes are cancelled for all faculties <b>except</b> Dentistry, Medicine, Continuing Education (non-credit courses and English & French credit courses), Stage in Dietetics Level 3 and Student Teaching for Education students.</p> --><p><a href="http://www.mcgill.ca/importantdates" target="_blank">http://www.mcgill.ca/importantdates</a> offers a more comprehensive listing of dates (including holidays).</P></SPAN></TD></TR></TABLE><P></DIV>
+<INPUT TYPE="hidden" NAME="TERM_IN" VALUE="201309">
+<INPUT TYPE="hidden" NAME="sel_crn" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="ADD_BTN" VALUE="dummy">
+<TABLE  CLASS="datadisplaytable" SUMMARY="This layout table is used to present the sections found" width="100%"><CAPTION class="captiontext">Sections Found</CAPTION>
+<TR>
+<TH COLSPAN="23" CLASS="ddtitle" scope="colgroup" >External</TH>
+</TR>
+<TR>
+<TH CLASS="ddheader" scope="col" >Select</TH>
+<TH CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Type>Type</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Credits/CE Units</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Title</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Capacity">Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Actual">Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Remaining">Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Capacity">WL Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Actual">WL Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Remaining">WL Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Instructor</TH>
+<TH CLASS="ddheader" scope="col" >Date (<ABBR title = "month month">MM</ABBR>/<ABBR title = "day day">DD</ABBR>)</TH>
+<TH CLASS="ddheader" scope="col" >Location</TH>
+<TH CLASS="ddheader" scope="col" >Status</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=EXPO&amp;crn_in=2422&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2422</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">EXPO</TD>
+<TD CLASS="dddefault">015</TD>
+<TD CLASS="dddefault">Exchange Term Away</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Exchange Term Away-Phys & Occ</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2596&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2596</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2597&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2597</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">002</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2598&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2598</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">003</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2599&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2599</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">004</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2600&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2600</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">005</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2601&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2601</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">006</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2602&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2602</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">007</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2603&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2603</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">008</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2604&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2604</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">009</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2605&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2605</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">010</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2606&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2606</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">011</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=IUPO&amp;crn_in=2607&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2607</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">IUPO</TD>
+<TD CLASS="dddefault">012</TD>
+<TD CLASS="dddefault">Inter-University Transfer Crse</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Inter-University Transfer</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=EXTL&amp;crse_in=LAPO&amp;crn_in=2437&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2437</A></TD>
+<TD CLASS="dddefault">EXTL</TD>
+<TD CLASS="dddefault">LAPO</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Leave of Absence</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Leave of Absence-Phys & Occ Th</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TH COLSPAN="23" CLASS="ddtitle" scope="colgroup" >Occupational Therapy</TH>
+</TR>
+<TR>
+<TH CLASS="ddheader" scope="col" >Select</TH>
+<TH CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Type>Type</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Credits/CE Units</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Title</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Capacity">Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Actual">Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Remaining">Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Capacity">WL Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Actual">WL Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Remaining">WL Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Instructor</TH>
+<TH CLASS="ddheader" scope="col" >Date (<ABBR title = "month month">MM</ABBR>/<ABBR title = "day day">DD</ABBR>)</TH>
+<TH CLASS="ddheader" scope="col" >Location</TH>
+<TH CLASS="ddheader" scope="col" >Status</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=245&amp;crn_in=11543&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">11543</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">245</TD>
+<TD CLASS="dddefault">002</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">3.000</TD>
+<TD CLASS="dddefault">Occupational Therapy Seminars.</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-02:25 PM</TD>
+<TD CLASS="dddefault">45</TD>
+<TD CLASS="dddefault">41</TD>
+<TD CLASS="dddefault">4</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Crystal Garnett </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-02:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Crystal Garnett </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=245&amp;crn_in=14564&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">14564</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">245</TD>
+<TD CLASS="dddefault">003</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Occupational Therapy Seminars.</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-02:25 PM</TD>
+<TD CLASS="dddefault">60</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">60</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">EDUC 624</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-02:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">EDUC 624</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="13516 201309" ID="action_id17">
+<LABEL for=action_id17><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=501&amp;crn_in=13516&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">13516</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">501</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Practicum</TD>
+<TD CLASS="dddefault">7.000</TD>
+<TD CLASS="dddefault">Clinical Practicum 1.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">20</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">20</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Caroline Storr , Marika Demers </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="13517 201309" ID="action_id19">
+<LABEL for=action_id19><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=502&amp;crn_in=13517&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">13517</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">502</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Practicum</TD>
+<TD CLASS="dddefault">7.000</TD>
+<TD CLASS="dddefault">Clinical Practicum 2.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">10</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">10</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Caroline Storr , Marika Demers </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="13518 201309" ID="action_id21">
+<LABEL for=action_id21><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=503&amp;crn_in=13518&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">13518</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">503</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Practicum</TD>
+<TD CLASS="dddefault">7.000</TD>
+<TD CLASS="dddefault">Clinical Practicum 3.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">10</TD>
+<TD CLASS="dddefault">4</TD>
+<TD CLASS="dddefault">6</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Caroline Storr , Marika Demers </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="7980 201309" ID="action_id23">
+<LABEL for=action_id23><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=7980&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">7980</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">8.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-09:55 AM</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">77</TD>
+<TD CLASS="dddefault">3</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/03-09/09</TD>
+<TD CLASS="dddefault">ARTS 145</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">W</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-09:55 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/11-09/11</TD>
+<TD CLASS="dddefault">ARTS 145</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-09:55 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/13-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-09:55 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/16-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">W</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-09:55 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/18-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-09:55 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">ARTS 145</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a laboratory and a seminar and a workshop.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="7981 201309" ID="action_id25">
+<LABEL for=action_id25><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=7981&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">7981</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">002</TD>
+<TD CLASS="dddefault">Workshop</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">77</TD>
+<TD CLASS="dddefault">3</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8258 201309" ID="action_id27">
+<LABEL for=action_id27><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=8258&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8258</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">003</TD>
+<TD CLASS="dddefault">Seminar</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">77</TD>
+<TD CLASS="dddefault">3</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 105</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 105</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 105</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 105</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 105</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8463 201309" ID="action_id29">
+<LABEL for=action_id29><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=8463&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8463</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">004</TD>
+<TD CLASS="dddefault">Laboratory</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">12:05 PM-01:55 PM</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">77</TD>
+<TD CLASS="dddefault">3</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc , Andrew B Christopher , Franzina Coutinho , Nancy Forget , Tokiko Hamasaki , Aliki Thomas </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 105</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8464 201309" ID="action_id31">
+<LABEL for=action_id31><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=8464&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8464</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">005</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 104</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 104</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">12:05 PM-01:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 104</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 104</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="11609 201309" ID="action_id33">
+<LABEL for=action_id33><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=11609&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">11609</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">006</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">12:05 PM-01:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=17663&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">17663</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">007</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">WF</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/02</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">12:35 PM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/09-09/13</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/09-09/13</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">WF</TD>
+<TD NOWRAP CLASS="dddefault">12:35 PM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/25-09/27</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">MW</TD>
+<TD NOWRAP CLASS="dddefault">12:35 PM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">10/28-10/30</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=17989&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">17989</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">008</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">W</TD>
+<TD NOWRAP CLASS="dddefault">11:05 AM-01:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">12:35 PM-01:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=17990&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">17990</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">009</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/09-09/09</TD>
+<TD CLASS="dddefault">HOSMER 301</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">10/28-10/28</TD>
+<TD CLASS="dddefault">HOSMER 301</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=545&amp;crn_in=18096&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">18096</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">545</TD>
+<TD CLASS="dddefault">010</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Therapeutic Strategies in OT 1.</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 17</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 17</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">10:35 AM-12:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 17</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-04:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Bernadette Nedelec , Marie-Eve Bolduc </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">HOSMER 17</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=550&amp;crn_in=8090&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8090</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">3.000</TD>
+<TD CLASS="dddefault">Enabling Human Occupation.</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-01:25 PM</TD>
+<TD CLASS="dddefault">75</TD>
+<TD CLASS="dddefault">76</TD>
+<TD CLASS="dddefault">-1</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">09/03-12/02</TD>
+<TD CLASS="dddefault">DUFF THTR 1</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a laboratory.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=550&amp;crn_in=8091&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8091</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">002</TD>
+<TD CLASS="dddefault">Laboratory</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Enabling Human Occupation.</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">75</TD>
+<TD CLASS="dddefault">76</TD>
+<TD CLASS="dddefault">-1</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">09/12-10/24</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">10/31-10/31</TD>
+<TD CLASS="dddefault">MCMED 409</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">11/07-11/07</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-03:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">11/14-11/14</TD>
+<TD CLASS="dddefault">MCMED 409</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">11/21-11/21</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=550&amp;crn_in=11878&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">11878</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">004</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Enabling Human Occupation.</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">08:05 AM-11:55 AM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">09/12-09/19</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">09/12-09/19</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">08:05 AM-11:55 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">10/03-10/03</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">10/03-10/03</TD>
+<TD CLASS="dddefault">HOSMER 16</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=550&amp;crn_in=18040&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">18040</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">005</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Enabling Human Occupation.</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">DAVIS B-6</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=550&amp;crn_in=18041&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">18041</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">006</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Enabling Human Occupation.</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">10/17-10/24</TD>
+<TD CLASS="dddefault">DAVIS B-2</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">11/07-11/07</TD>
+<TD CLASS="dddefault">DAVIS B-2</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=OCC1&amp;crse_in=550&amp;crn_in=18042&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">18042</A></TD>
+<TD CLASS="dddefault">OCC1</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">007</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Enabling Human Occupation.</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">10/17-10/24</TD>
+<TD CLASS="dddefault">DAVIS 3</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">11/07-11/07</TD>
+<TD CLASS="dddefault">DAVIS 3</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:05 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Cynthia Perlman , Franzina Coutinho </TD>
+<TD CLASS="dddefault">11/28-11/28</TD>
+<TD CLASS="dddefault">DAVIS 3</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TH COLSPAN="23" CLASS="ddtitle" scope="colgroup" >Physical Therapy</TH>
+</TR>
+<TR>
+<TH CLASS="ddheader" scope="col" >Select</TH>
+<TH CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Type>Type</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Credits/CE Units</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Title</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Capacity">Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Actual">Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Remaining">Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Capacity">WL Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Actual">WL Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Remaining">WL Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Instructor</TH>
+<TH CLASS="ddheader" scope="col" >Date (<ABBR title = "month month">MM</ABBR>/<ABBR title = "day day">DD</ABBR>)</TH>
+<TH CLASS="ddheader" scope="col" >Location</TH>
+<TH CLASS="ddheader" scope="col" >Status</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=245&amp;crn_in=8691&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8691</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">245</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">3.000</TD>
+<TD CLASS="dddefault">Physical Therapy Seminars.</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-02:25 PM</TD>
+<TD CLASS="dddefault">60</TD>
+<TD CLASS="dddefault">51</TD>
+<TD CLASS="dddefault">9</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Crystal Garnett </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-02:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Crystal Garnett </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8095 201309" ID="action_id46">
+<LABEL for=action_id46><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=550&amp;crn_in=8095&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8095</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">7.000</TD>
+<TD CLASS="dddefault">Physical Therapy Orthopedic Management.</TD>
+<TD CLASS="dddefault">M</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-04:55 PM</TD>
+<TD CLASS="dddefault">81</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">1</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-11:25 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/03-09/03</TD>
+<TD CLASS="dddefault">MCMED 521</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-11:25 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/05-09/05</TD>
+<TD CLASS="dddefault">MCMED 521</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-11:25 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/10-09/10</TD>
+<TD CLASS="dddefault">MCMED 521</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-11:25 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/12-09/12</TD>
+<TD CLASS="dddefault">MCMED 521</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-11:25 AM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">STBIO S3/3</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-04:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a laboratory and a workshop.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8096 201309" ID="action_id48">
+<LABEL for=action_id48><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=550&amp;crn_in=8096&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8096</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">002</TD>
+<TD CLASS="dddefault">Laboratory</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Orthopedic Management.</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">81</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">1</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/17-12/02</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture and a workshop.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8097 201309" ID="action_id50">
+<LABEL for=action_id50><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=550&amp;crn_in=8097&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8097</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">003</TD>
+<TD CLASS="dddefault">Workshop</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Orthopedic Management.</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">12:35 PM-01:55 PM</TD>
+<TD CLASS="dddefault">81</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">1</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/03-12/02</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture and a laboratory.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=550&amp;crn_in=8480&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8480</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">004</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Orthopedic Management.</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-01:55 PM</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/03-12/02</TD>
+<TD CLASS="dddefault">HOSMCH 11</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=550&amp;crn_in=11890&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">11890</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">005</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Orthopedic Management.</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-01:55 PM</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/03-11/15</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-01:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">11/19-12/02</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=550&amp;crn_in=17279&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">17279</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">006</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Orthopedic Management.</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-01:55 PM</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/03-11/15</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-01:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">11/19-12/02</TD>
+<TD CLASS="dddefault">HOSMER 104</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=550&amp;crn_in=13657&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">13657</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">550</TD>
+<TD CLASS="dddefault">008</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Orthopedic Management.</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-01:55 PM</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">09/03-11/15</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-01:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Richard A. Preuss </TD>
+<TD CLASS="dddefault">11/19-12/02</TD>
+<TD CLASS="dddefault">HOSMER 301</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8099 201309" ID="action_id56">
+<LABEL for=action_id56><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=8099&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8099</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">4.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">W</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">78</TD>
+<TD CLASS="dddefault">2</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">SADB 1/12</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">W</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung </TD>
+<TD CLASS="dddefault">10/09-10/09</TD>
+<TD CLASS="dddefault">MCMED 504</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">R</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung </TD>
+<TD CLASS="dddefault">10/31-10/31</TD>
+<TD CLASS="dddefault">MCMED 521</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">W</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung </TD>
+<TD CLASS="dddefault">11/06-11/06</TD>
+<TD CLASS="dddefault">SADB 2/36</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a laboratory and a workshop.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8662 201309" ID="action_id58">
+<LABEL for=action_id58><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=8662&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8662</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">003</TD>
+<TD CLASS="dddefault">Workshop</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">03:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">78</TD>
+<TD CLASS="dddefault">2</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/06-09/06</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/13-09/13</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/20-09/20</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/27-10/11</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">10/18-10/18</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">10/25-11/08</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">11/15-11/15</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">11/22-11/22</TD>
+<TD CLASS="dddefault">MCMED 206/7</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">11/29-12/03</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture and a laboratory.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="8877 201309" ID="action_id60">
+<LABEL for=action_id60><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=8877&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8877</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">004</TD>
+<TD CLASS="dddefault">Drop-in Lab</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">78</TD>
+<TD CLASS="dddefault">2</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD COLSPAN="22" CLASS="dddefault">NOTES: This section must be taken with a lecture and a workshop.</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=8902&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">8902</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">005</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">WF</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMCH 11</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">HOSMCH 11</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=11818&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">11818</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">006</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">WF</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/03-11/15</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/03-11/15</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">WF</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">11/20-12/02</TD>
+<TD CLASS="dddefault">HOSMER 301</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">08:35 AM-12:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">11/22-12/02</TD>
+<TD CLASS="dddefault">HOSMER 301</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = Closed>C</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=11820&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">11820</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">007</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">WF</TD>
+<TD NOWRAP CLASS="dddefault">01:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/03-11/15</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">WF</TD>
+<TD NOWRAP CLASS="dddefault">01:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">11/20-12/02</TD>
+<TD CLASS="dddefault">HOSMER 202</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="17281 201309" ID="action_id65">
+<LABEL for=action_id65><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=17281&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">17281</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">008</TD>
+<TD CLASS="dddefault">Laboratory</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">01:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">22</TD>
+<TD CLASS="dddefault">58</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Claire Fritzi Perez , Joyce Fung , Isabelle J. Gagnon , Adriana Venturini </TD>
+<TD CLASS="dddefault">09/03-09/06</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Claire Fritzi Perez , Joyce Fung , Isabelle J. Gagnon , Adriana Venturini </TD>
+<TD CLASS="dddefault">09/13-09/13</TD>
+<TD CLASS="dddefault">CURRIE AEROBICS</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">01:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Claire Fritzi Perez , Joyce Fung , Isabelle J. Gagnon , Adriana Venturini </TD>
+<TD CLASS="dddefault">09/20-12/03</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Claire Fritzi Perez , Joyce Fung , Isabelle J. Gagnon , Adriana Venturini </TD>
+<TD CLASS="dddefault">10/22-10/22</TD>
+<TD CLASS="dddefault">HOSMCH 10</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=551&amp;crn_in=14436&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">14436</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">551</TD>
+<TD CLASS="dddefault">011</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Physical Therapy Neurological Rehabilitation.</TD>
+<TD CLASS="dddefault">F</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Joyce Fung , Isabelle J. Gagnon , Claire Fritzi Perez </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=570&amp;crn_in=10996&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">10996</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">570</TD>
+<TD CLASS="dddefault">002</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Strategies in Physical Therapy Professional Practice.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Matthew Robert Hunt , Caroline Storr </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="13863 201309" ID="action_id69">
+<LABEL for=action_id69><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=571&amp;crn_in=13863&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">13863</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">571</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Practicum</TD>
+<TD CLASS="dddefault">7.000</TD>
+<TD CLASS="dddefault">PT Clinical Practicum 1.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">10</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">10</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Crystal Garnett </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Temporarily closed</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="13864 201309" ID="action_id71">
+<LABEL for=action_id71><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=572&amp;crn_in=13864&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">13864</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">572</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Practicum</TD>
+<TD CLASS="dddefault">7.000</TD>
+<TD CLASS="dddefault">PT Clinical Practicum 2.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">10</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">10</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Crystal Garnett </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Temporarily closed</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="12453 201309" ID="action_id73">
+<LABEL for=action_id73><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=PHTH&amp;crse_in=573&amp;crn_in=12453&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">12453</A></TD>
+<TD CLASS="dddefault">PHTH</TD>
+<TD CLASS="dddefault">573</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Practicum</TD>
+<TD CLASS="dddefault">7.000</TD>
+<TD CLASS="dddefault">PT Clinical Practicum 3.</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">80</TD>
+<TD CLASS="dddefault">7</TD>
+<TD CLASS="dddefault">73</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Adriana Venturini , Crystal Garnett </TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TH COLSPAN="23" CLASS="ddtitle" scope="colgroup" >Phys & Occ Therapy</TH>
+</TR>
+<TR>
+<TH CLASS="ddheader" scope="col" >Select</TH>
+<TH CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Type>Type</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Credits/CE Units</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Title</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Capacity">Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Actual">Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Remaining">Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Capacity">WL Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Actual">WL Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Remaining">WL Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Instructor</TH>
+<TH CLASS="ddheader" scope="col" >Date (<ABBR title = "month month">MM</ABBR>/<ABBR title = "day day">DD</ABBR>)</TH>
+<TH CLASS="ddheader" scope="col" >Location</TH>
+<TH CLASS="ddheader" scope="col" >Status</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=POTH&amp;crse_in=455&amp;crn_in=1492&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">1492</A></TD>
+<TD CLASS="dddefault">POTH</TD>
+<TD CLASS="dddefault">455</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">3.000</TD>
+<TD CLASS="dddefault">Neurophysiology.</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">11:35 AM-02:25 PM</TD>
+<TD CLASS="dddefault">110</TD>
+<TD CLASS="dddefault">94</TD>
+<TD CLASS="dddefault">16</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Sandeep Subramanian , Philippe Archambault , Lesley Norris , Stephan Quessy </TD>
+<TD CLASS="dddefault">09/03-12/02</TD>
+<TD CLASS="dddefault">MCMED 1034</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="18014 201309" ID="action_id76">
+<LABEL for=action_id76><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=POTH&amp;crse_in=563&amp;crn_in=18014&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">18014</A></TD>
+<TD CLASS="dddefault">POTH</TD>
+<TD CLASS="dddefault">563</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">3.000</TD>
+<TD CLASS="dddefault">Foundations of Professional Practice.</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">160</TD>
+<TD CLASS="dddefault">151</TD>
+<TD CLASS="dddefault">9</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Matthew Robert Hunt , Caroline Storr </TD>
+<TD CLASS="dddefault">09/03-11/26</TD>
+<TD CLASS="dddefault">SADB M-1</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-04:55 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Matthew Robert Hunt , Caroline Storr </TD>
+<TD CLASS="dddefault">12/03-12/03</TD>
+<TD CLASS="dddefault">SADB M-1</TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=POTH&amp;crse_in=563&amp;crn_in=18361&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">18361</A></TD>
+<TD CLASS="dddefault">POTH</TD>
+<TD CLASS="dddefault">563</TD>
+<TD CLASS="dddefault">002</TD>
+<TD CLASS="dddefault">Break-Out Room</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Foundations of Professional Practice.</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">04:05 PM-05:25 PM</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">5</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">Matthew Robert Hunt , Caroline Storr </TD>
+<TD CLASS="dddefault">09/03-09/03</TD>
+<TD CLASS="dddefault">ENGTR 0100</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Matthew Robert Hunt , Caroline Storr </TD>
+<TD CLASS="dddefault">10/01-10/01</TD>
+<TD CLASS="dddefault">ENGTR 0100</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">T</TD>
+<TD NOWRAP CLASS="dddefault">02:35 PM-05:25 PM</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault">Matthew Robert Hunt , Caroline Storr </TD>
+<TD CLASS="dddefault">11/26-11/26</TD>
+<TD CLASS="dddefault">ENGTR 0100</TD>
+<TD CLASS="dddefault">Registration Not Required</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TH COLSPAN="23" CLASS="ddtitle" scope="colgroup" >Registration</TH>
+</TR>
+<TR>
+<TH CLASS="ddheader" scope="col" >Select</TH>
+<TH CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = Type>Type</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Credits/CE Units</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Title</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Capacity">Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Actual">Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Section Remaining">Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Capacity">WL Cap</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Actual">WL Act</ABBR></TH>
+<TH CLASS="ddheader" scope="col" ><ABBR title = "Waitlist Remaining">WL Rem</ABBR></TH>
+<TH CLASS="ddheader" scope="col" >Instructor</TH>
+<TH CLASS="ddheader" scope="col" >Date (<ABBR title = "month month">MM</ABBR>/<ABBR title = "day day">DD</ABBR>)</TH>
+<TH CLASS="ddheader" scope="col" >Location</TH>
+<TH CLASS="ddheader" scope="col" >Status</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<INPUT TYPE="checkbox" NAME="sel_crn" VALUE="2332 201309" ID="action_id79">
+<LABEL for=action_id79><SPAN class=fieldlabeltextinvisible>add to worksheet</SPAN></LABEL>
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="201309">
+</TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=REGN&amp;crse_in=RCPO&amp;crn_in=2332&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2332</A></TD>
+<TD CLASS="dddefault">REGN</TD>
+<TD CLASS="dddefault">RCPO</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Registration Course</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">I confirm P&OT Reg</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">500</TD>
+<TD CLASS="dddefault">268</TD>
+<TD CLASS="dddefault">232</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault"><ABBR title = "Not available for registration">NR</ABBR></TD>
+<TD CLASS="dddefault"><A HREF="/pban1/bwckschd.p_disp_listcrse?term_in=201309&amp;subj_in=REGN&amp;crse_in=WDPO&amp;crn_in=2908&amp;search_mode_in=NON_NT" onMouseOver="window.status='Detail';  return true" onFocus="window.status='Detail';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">2908</A></TD>
+<TD CLASS="dddefault">REGN</TD>
+<TD CLASS="dddefault">WDPO</TD>
+<TD CLASS="dddefault">001</TD>
+<TD CLASS="dddefault">Registration Course</TD>
+<TD CLASS="dddefault">0.000</TD>
+<TD CLASS="dddefault">Withdrawn from the University</TD>
+<TD COLSPAN="2" CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">100</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault">0</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">09/03-12/03</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Active</TD>
+</TR>
+<TR>
+<TD COLSPAN="23" CLASS="dddefault">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="submit" NAME="ADD_BTN" VALUE="Register">
+<INPUT TYPE="submit" NAME="ADD_BTN" VALUE="Add to WorkSheet">
+<INPUT TYPE="submit" NAME="ADD_BTN" VALUE="Class Search">
+</FORM>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<TABLE  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
+                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><TR><TD class=bgtabon width="100%" colSpan=2><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD></TR></TABLE>
+<A HREF="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</A>
+<DIV class="pagefooterdiv">
+<SPAN class="releasetext">Release: 8.4 / 1.37</SPAN>
+</DIV>
+<DIV class="poweredbydiv">
+</DIV>
+<DIV class="div1"></DIV>
+<DIV class="div2"></DIV>
+<DIV class="div3"></DIV>
+<DIV class="div4"></DIV>
+<DIV class="div5"></DIV>
+<DIV class="div6"></DIV>
+</DIV>
+</BODY>
+</HTML>
+
