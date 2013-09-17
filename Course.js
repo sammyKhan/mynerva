@@ -31,6 +31,7 @@ courseSchema.methods.toVEvent = function() {
   str += 'SUMMARY:' + this.courseCode + '\n';
   str += 'TRANSP:OPAQUE\n';
   str += 'END:VEVENT\n';
+  return str;
 };
 
 module.exports = mongoose.model('Course', courseSchema);
