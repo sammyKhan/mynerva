@@ -4,7 +4,7 @@ var express = require('express')
   , Step = require('./step.js');
 
 var beginning = 
-'BEGIN:VCALENDAR\r\n PRODID:123\r\n VERSION:2.0\r\n CALSCALE:GREGORIAN\r\n METHOD:PUBLISH\r\n X-WR-CALNAME:MYNERVA\r\n X-WR-TIMEZONE:America/Toronto\r\n BEGIN:VTIMEZONE\r\n TZID:America/Toronto\r\n X-LIC-LOCATION:America/Toronto\r\n BEGIN:DAYLIGHT\r\n TZOFFSETFROM:-0500\r\n TZOFFSETTO:-0400\r\n TZNAME:EDT\r\n DTSTART:19700308T020000\r\n RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\n END:DAYLIGHT\r\n BEGIN:STANDARD\r\n TZOFFSETFROM:-0400\r\n TZOFFSETTO:-0500\r\n TZNAME:EST\r\n DTSTART:19701101T020000\r\n RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\n END:STANDARD\r\n END:VTIMEZONE\r\n';
+'BEGIN:VCALENDAR\r\nPRODID:123\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nX-WR-CALNAME:MYNERVA\r\nX-WR-TIMEZONE:America/Toronto\r\nBEGIN:VTIMEZONE\r\nTZID:America/Toronto\r\nX-LIC-LOCATION:America/Toronto\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nTZOFFSETTO:-0400\r\nTZNAME:EDT\r\nDTSTART:19700308T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nTZOFFSETTO:-0500\r\nTZNAME:EST\r\nDTSTART:19701101T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\n';
 
 app.use(express.bodyParser());
 app.use(express.static('public'));
@@ -28,6 +28,7 @@ app.get('/:crns', function(req, res) {
       courses.forEach(function(course) {
         cal += course.toVEvent();
       });
+      cal += 'END:VCALENDAR';
       return cal;
     },
     function returnIt(err, cal) {
