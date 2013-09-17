@@ -9,3 +9,13 @@ Minerva Schedule Exporter
 ### Current status:
   * Courses scraped from minerva thanks to Dom https://github.com/jokeofweek/hackmcgill
   * Basic outline of server
+
+### What needs to be done:
+  * Fix the file format output
+  * Fill in the UI
+
+### Future stuff:
+  * Add support for other semesters
+  * Add support for courses with 'TBA' day/time
+  * Scrape exam schedules
+  * Create API for managing courses
