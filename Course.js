@@ -16,12 +16,14 @@ var courseSchema = mongoose.Schema({
 
 courseSchema.index({crn: 1});
 
+var lastDay = new Date('Dec 03 2013');
+
 courseSchema.methods.toVEvent = function() {
   var str = 'BEGIN:VEVENT\n';
   str += 'DTSTART;TZID=America/Toronto:' + this.startTime + '\n';
   str += 'DTEND;TZID=America/Toronto:' + this.endTime + '\n';
   str += 'RRULE:FREQ=WEEKLY;';
-  str += 'UNTIL=' + this.until;
+  str += 'UNTIL=' + lastDay;
   str += ';BYDAY=' + this.days + '\n';
   str += 'UID:' + this._id + '\n';
   str += 'DESCRIPTION:' + this.title + '\n';
