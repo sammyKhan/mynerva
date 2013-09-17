@@ -15,8 +15,9 @@ function saveSection(section) {
     var days = [];
     var dayString = [];
     var times = loc.time.split('-');
-    var startTime = START_OF_SEMESTER += times[0];
-    var endTime = START_OF_SEMESTER += times[1];
+    if (times.length < 2) return;
+    var startTime = START_OF_SEMESTER + times[0];
+    var endTime = START_OF_SEMESTER + times[1];
     if (loc.days.indexOf('M') !== -1) {
       days.push(moment(startTime).day('Monday'));
       dayString.push('MO');
@@ -37,14 +38,15 @@ function saveSection(section) {
       days.push(moment(startTime).day('Friday'));
       dayString.push('FR');
     }
-    if (days.length > 1) {
+    if (days.length > 1) { //sometimes days are TBA
       days.sort(function(a,b) {
         if (a.unix() < b.unix()) return -1;
         return 1;
       });
       courseDoc.days = dayString.join(',');
-      courseDoc.startTime = days[0].toDate();
-      courseDoc.endTime = moment(endTime).day(days[0].day()).toDate();
+      courseDoc.startTime = days[0].toISOString();
+      var endTime = moment(endTime).day(days[0].day()).toISOString();
+      courseDoc.endTime = endTime;
       courseDoc.lastMod = new Date();
       courseDoc.save(function(err, course) {
         if (err) throw err;
