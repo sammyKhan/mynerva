@@ -20,11 +20,11 @@ app.get('/:crns', function(req, res) {
       Course.where('crn').in(crns).exec(this);
     },
     function renderEvents(err, courses) {
+      if (err) throw err;
       if (courses.length === 0) {
         res.send('No courses found with those CRNs');
       }
       console.log('got ' + courses.length + ' courses');
-      if (err) throw err;
       courses.forEach(function(course) {
         cal += course.toVEvent();
       });
